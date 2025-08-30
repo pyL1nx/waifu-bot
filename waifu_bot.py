@@ -6,6 +6,9 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, filters
 import requests
 import asyncio
+from dotenv import load_dotenv
+load_dotenv()
+
 
 # Configure logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -284,3 +287,4 @@ Current: {user_info['tier'].title()} | Waifu: {self.waifu_personalities[user_inf
 if __name__ == '__main__':
     bot = WaifuBot()
     bot.run()
+
